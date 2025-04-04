@@ -177,57 +177,34 @@ itinerario,endereco,referencia,horario
 06 - Louveira,Av. da Uva - Bairro do Poste - Jundiai,Mercado Agua Doce,6:57
 06 - Louveira,Rod. Anhanguera - Dristrito Industrial - Jundiai,Sem ponto,7:10
 06 - Louveira,Rod. Dom Gabriel Paulino Couto - Distrito Industrial - Jundiai,Posto Centenario,7:20
-07 - Cidade Nova,R. Florindo Zambon - Cidade Nova 2 - Jundiai,Mercado Flores,6:05
-07 - Cidade Nova,R. Atibaia - Cidade Nova 2 - Jundiai,Praca,6:06
-07 - Cidade Nova,R. Alfredo Pizzocaro - Tamoio - Jundiai,Padaria Belem,6:07
-07 - Cidade Nova,R. Adamantina - Tamoio - Jundiai,Adega S.O.S,6:08
-07 - Cidade Nova,Av. Carlos Angelo Mathion - Tamoio - Jundiai,Igreja Universal,6:09
-07 - Cidade Nova,R. Carlos Humel Guimaraes - Tamoio - Jundiai,Ponto de onibus Urbano,6:10
-07 - Cidade Nova,R. Sao Jose dos Campos - Vila Nambi - Jundiai,Ponto de onibus Urbano,6:12
-07 - Cidade Nova,R. Palmeira dos indios - Vila Nambi - Jundiai,Ponto de onibus Urbano,6:13
-07 - Cidade Nova,Av. Bento do Amaral Gurgel - Vila Nambi - Jundiai,Farmacia Estrela,6:14
-07 - Cidade Nova,R. Angelo Corradini - Vila Nambi - Jundiai,Viacao Leme,6:15
-07 - Cidade Nova,R. Americo Bruno - Colonia - Jundiai,Sem Ponto,6:16
-07 - Cidade Nova,Av. Imigrantes - Colonia - Jundiai,Terminal Colonia,6:17
-07 - Cidade Nova,Av. Imigrantes - Colonia - Jundiai,Condominio Residencial Villaggio Del Sogno,6:17
-07 - Cidade Nova,Av. Brigido Marcassa - Jd. Pacaembu - Jundiai,Ponto de onibus Urbano,6:19
-07 - Cidade Nova,Av. Alexandre Fleming - Jd. Pacaembu - Jundiai,Estadio Jaime Cintra,6:20
-07 - Cidade Nova,R. Luiz Silvestroni - Jd. Pacaembu - Jundiai,Ponto de onibus Urbano (SemAforo),6:21
-07 - Cidade Nova,R. Dr. Antenor Soares Grandra - Colonia - Jundiai,Ponto de onibus Urbano,6:22
-07 - Cidade Nova,R. Agostinho Balestrim - Colonia - Jundiai,Sem Ponto,6:23
-07 - Cidade Nova,R. Luiz Benachio - Colonia - Jundiai,Igreja Colonia,6:23
-07 - Cidade Nova,Av. Comendador Antonio Borim - Colonia - Jundiai,Ponto de onibus Urbano - Entrada Jd. Carpas (Semaforo),6:24
-07 - Cidade Nova,R. Moacir Lopes - Jd. Cacula - Jundiai,Esquina com a Rua Ruy Camargo Duarte,6:25
-07 - Cidade Nova,Av. Giustiniano Borin - Jd. Cacula - Jundiai,Condominio Genova,6:25
-07 - Cidade Nova,R. Fernao Dias Paes Leme - Jd. Sao Camilo - Jundiai,Praca,7:27
-07 - Cidade Nova,R. Julio Ribeiro - Jd. Sao Camilo - Jundiai,Mercado Parazzi (Esquina),6:29
-07 - Cidade Nova,R. Jose Maria Whitaker - Jd. Sao Camilo - Jundiai,Ponto de onibus Urbano,6:30
-07 - Cidade Nova,Av. Sao Camilo - Jd. Sao Camilo - Jundiai,Ponto de onibus Urbano,6:32
-07 - Cidade Nova,R. Espirito Santo - Taruma - Jundiai,Igreja Congregracao,6:34
-07 - Cidade Nova,R. Rio de Janeiro - Jardim Taruma - Jundiai,CRAS Sao Camilo,6:35
-07 - Cidade Nova,Av. Capitao Francisco Copelli - Jardim Taruma - Jundiai,Menor Preco Supermercado,6:38
-07 - Cidade Nova,R. Bernardo Guimaraes - Jardim California - Jundiai,Sem Ponto,6:39
-07 - Cidade Nova,Av. Antonio Raimundo de Oliveira - Jardim California - Jundiai,Ponto de onibus Urbano (Praca),6:41
-07 - Cidade Nova,Av. Humberto Cereser - Jundiai Mirim - Jundiai,Posto Jundiai Mirim,6:44
-07 - Cidade Nova,Rod. Joao Cereer - Pinheirinhos - Jundiai,Parque da Cidade,6:47
-07 - Cidade Nova,Rod. Vereador Geraldo Dias - Torres Sao Jose - Jundiai,Represa DAE,6:49
-07 - Cidade Nova,Rod. Vereador Geraldo Dias - Torres Sao Jose - Jundiai,Rotatoria Terra da Uva,6:54
-07 - Cidade Nova,Av. Andre Costa - Morada das Vinhas - Jundiai,Supermercado Morada,6:55
-07 - Cidade Nova,R. Uva Niagara - Morada das Vinhas - Jundiai,Associacao Crista (ACDC),6:56
-07 - Cidade Nova,R. Uva Niagara - Morada das Vinhas - Jundiai,Gastaldo Lanchonete,6:57
-07 - Cidade Nova,R. Dr. Nelson Martinho - Cecap - Jundiai,Ponto de onibus Urbano,7:00
-07 - Cidade Nova,R. Alceu de Toledo Pontes - Cecap - Jundiai,Ponto de onibus Urbano,7:01
-07 - Cidade Nova,Rod. Vereador Geraldo Dias - Cecap - Jundiai,Terminal CECAP,7:03
-07 - Cidade Nova,Av. Prof. Pedro Clarismundo Fornari - Engordadouro - Jundiai,Sem Ponto,7:04
-07 - Cidade Nova,R. Miguel Hilario Navarrete Sanches - Vl. Marlene - Jundiai,Ponto de onibus Urbano,7:05
-07 - Cidade Nova,Av. Bento Figueiredo - Vl. Marlene - Jundiai,Ponto de onibus Urbano (Posto Shell),7:06
-07 - Cidade Nova,Rod. Ver. Geraldo Dias - Hortolandia - Jundiai,Sem Ponto,7:07
-07 - Cidade Nova,R. Palmira Cervi Barbaro - Hortolandia - Jundiai,Ponto de onibus Urbano,7:08
-07 - Cidade Nova,R. Itirapina - Hortolandia - Jundiai,Ponto de onibus Urbano,7:10
-07 - Cidade Nova,R. Benedito Godoi Ferraz - Vl. Hortolandia - Jundiai,Ponto de onibus Urbano,7:13
-07 - Cidade Nova,Av. Pref. Luis Latorre - Vl. Hortencias - Jundiai,Churrascaria da fazenda,7:17
-07 - Cidade Nova,Av. Armando Giassetti - Meias Aco - Jundiai,Ponto de onibus Urbano,7:20
-07 - Cidade Nova,Rod. Dom Gabriel Paulino Couto - Distrito Industrial - Jundiai,Posto Centenario,7:22
+07 - Jarinu,Estr. Mun. Atilio Squizato - Roseiral - Jarinu,Praca do Roseiral,6:05
+07 - Jarinu,Rua Antenor Soares Granda - Centro - Jarinu,Ponto de onibus,6:06
+07 - Jarinu,Estr. Mun. Natal Lorencini - Fazenda Campo Verde - Jarinu,Fazenda Campo Verde,6:07
+07 - Jarinu,Av. Humberto Cereser - Caxambu - Jundiai,Restaurante Piatti Belli,6:08
+07 - Jarinu,Av. Com. Antonio Borin - Caxambu - Jundiai,Paroquia Senhor Bom Jesus Caxambu,6:09
+07 - Jarinu,Av. Imigrantes - Colonia - Jundiai,Terminal Colonia,6:10
+07 - Jarinu,Av. Imigrantes - Colonia - Jundiai,Condominio Residencial Villaggio Del Sogno,6:12
+07 - Jarinu,Av. Brigido Marcassa - Jd. Pacaembu - Jundiai,Ponto de Onibus Urbano,6:13
+07 - Jarinu,Av. Alexandre Fleming - Jd. Pacaembu - Jundiai,Estádio Jaime Cintra,6:14
+07 - Jarinu,R. Luiz Silvestroni - Jd. Pacaembu - Jundiai,Ponto de Onibus Urbano (Semáforo),6:15
+07 - Jarinu,R. Dr. Antenor Soares Grandra - Colonia - Jundiai,Ponto de Onibus Urbano,6:16
+07 - Jarinu,R. Agostinho Balestrim - Colonia - Jundiai,sem Ponto,6:17
+07 - Jarinu,R. Luiz Benachio - Colonia - Jundiai,Igreja Colonia,6:17
+07 - Jarinu,Av. Comendador Antonio Borim - Colonia - Jundiai,Ponto de Onibus Urbano - Entrada Jd. Carpas (Semaforo),6:19
+07 - Jarinu,R. Moacir Lopes - Jd. Cacula - Jundiai,Esquina com a Rua Ruy Camargo Duarte,6:20
+07 - Jarinu,Av. Giustiniano Borin - Jd. Cacula - Jundiai,Condomínio Genova,6:21
+07 - Jarinu,R. Fernao Dias Paes Leme - Jd. Sao Camilo - Jundiai,Praca,6:22
+07 - Jarinu,R. Julio Ribeiro - Jd. Sao Camilo - Jundiai,Mercado Parazzi (Esquina),6:23
+07 - Jarinu,R. José Maria Whitaker - Jd. Sao Camilo - Jundiai,Ponto de Onibus Urbano,6:23
+07 - Jarinu,Av. Sao Camilo - Jd. Sao Camilo - Jundiai,Ponto de Onibus Urbano,6:24
+07 - Jarinu,R. Espirito Santo - Taruma - Jundiai,Igreja Congregracao,6:25
+07 - Jarinu,R. Rio de Janeiro - Jardim Taruma - Jundiai,CRAS Sao Camilo,6:25
+07 - Jarinu,Av. Capitao Francisco Copelli - Jardim Taruma - Jundiai,Menor Preco Supermercado,7:27
+07 - Jarinu,R. Bernardo Guimaraes - Jardim California - Jundiai,Sem Ponto,6:29
+07 - Jarinu,Av. Antônio Raimundo de Oliveira - Jardim California - Jundiai,Ponto de Onibus Urbano (Praca),6:30
+07 - Jarinu,Av. Humberto Cereser - Jundiai Mirim - Jundiai,Posto Jundiai Mirim,6:32
+07 - Jarinu,Rod. Joao Cereer - Pinheirinhos - Jundiai,Parque da Cidade,6:34
+07 - Jarinu,Rod. Dom Gabriel Paulino Couto - Distrito Industrial - Jundiai,Posto Centenario,6:35
 08 - Moinho,Rua Palmeiras dos indios - Jd. Vista Alegre - Campo Limpo pta,Mercado Vitoria,5:50
 08 - Moinho,Rod. Edgar Maximo Zamboto - Lagoa Branca - Campo Limpo pta,Rancho da Pamonha,5:53
 08 - Moinho,Rua Maria Jose Rodrigues - Jd. Santa Lucia - Campo Limpo Pta,Coopercica,5:55
