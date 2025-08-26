@@ -49,29 +49,31 @@
         let itineraries = {};
     
         // Função para carregar o arquivo CSV
-        function loadCSV() {
+        async function loadCSV() {
         const container = document.querySelector('.containeritinerarios');
         container.innerHTML = '';
-        Papa.parse("itinerarios.csv?v=" + Date.now(), {
-            download: true,
-            header: true,
-            skipEmptyLines: true,
-            encoding: "UTF-8",
-            transformHeader: function(h){ return (h || '').trim().toLowerCase(); },
-            transform: function(v){ return typeof v === 'string' ? v.trim() : v; },
-            complete: function (results) {
-                processCSVData(results.data);
-            },
-            error: function (error) {
-                console.error("Erro ao carregar o arquivo CSV:", error);
+        try {
+            const response = await fetch("itinerarios.csv?v=" + Date.now());
+            const arrayBuffer = await response.arrayBuffer();
+            let csvText = new TextDecoder('utf-8').decode(arrayBuffer);
+            if (csvText.includes('\uFFFD') || csvText.includes('�')) {
+                csvText = new TextDecoder('iso-8859-1').decode(arrayBuffer);
             }
-        });
+            const results = Papa.parse(csvText, {
+                header: true,
+                skipEmptyLines: true,
+                transformHeader: function(h){ return (h || '').trim().toLowerCase(); },
+                transform: function(v){ return typeof v === 'string' ? v.trim() : v; }
+            });
+            processCSVData(results.data);
+        } catch (error) {
+            console.error("Erro ao carregar o arquivo CSV:", error);
+        }
 }
 
     function fixEncoding(str) {
         if (typeof str !== 'string') return '';
-        const cleaned = str.replace(/\uFFFD/g, '');
-        return cleaned.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
 
     function processCSVData(data) {
