@@ -21,25 +21,7 @@
 
     <p>Escolha um itinerário abaixo para visualizar</p>
 
-    <div class="containeritinerarios">
-        <a class="containerturnos-item">Caxambu</a>
-        <a class="containerturnos-item">Cidade Nova</a>
-        <a class="containerturnos-item">Figueira Branca</a>
-        <a class="containerturnos-item">Franco Da Rocha</a>
-        <a class="containerturnos-item">Francisco Morato</a>
-        <a class="containerturnos-item">Jardim Bertioga</a>
-        <a class="containerturnos-item">Jardim Da Lagoa</a>
-        <a class="containerturnos-item">Jarinu</a>
-        <a class="containerturnos-item">Louveira</a>
-        <a class="containerturnos-item">Moinho</a>
-        <a class="containerturnos-item">Monte Serrat</a>
-        <a class="containerturnos-item">Parque Santana</a>
-        <a class="containerturnos-item">Santo Antonio</a>
-        <a class="containerturnos-item">Vila Popular</a>
-        <a class="containerturnos-item">Ouro Verde</a>
-        <a class="containerturnos-item">Barra Funda</a>
-        <a class="containerturnos-item">Dom Pedro</a>
-    </div>
+    <div class="containeritinerarios"></div>
 
         <div id="overlay" class="overlay">
         <header class="overlay-header">
@@ -69,21 +51,28 @@
     
         // Função para carregar o arquivo CSV
         function loadCSV() {
-        Papa.parse("itinerariosadm.csv", {
-        download: true,
-        header: true,
-        encoding: "UTF-8", // Garante que o arquivo seja interpretado como UTF-8
-        complete: function (results) {
-            processCSVData(results.data);
-        },
-        error: function (error) {
-            console.error("Erro ao carregar o arquivo CSV:", error);
-        }
-    });
+        const container = document.querySelector('.containeritinerarios');
+        container.innerHTML = '';
+        Papa.parse("itinerarios.csv?v=" + Date.now(), {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            encoding: "UTF-8",
+            transformHeader: function(h){ return (h || '').trim().toLowerCase(); },
+            transform: function(v){ return typeof v === 'string' ? v.trim() : v; },
+            complete: function (results) {
+                processCSVData(results.data);
+            },
+            error: function (error) {
+                console.error("Erro ao carregar o arquivo CSV:", error);
+            }
+        });
 }
 
     function fixEncoding(str) {
-        return decodeURIComponent(escape(str));
+        if (typeof str !== 'string') return '';
+        const cleaned = str.replace(/\uFFFD/g, '');
+        return cleaned.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
 
     function processCSVData(data) {
@@ -92,51 +81,54 @@
             const endereco = fixEncoding(row.endereco);
             const referencia = fixEncoding(row.referencia);
             const horario = row.horario;
+            const turno = (row.turno || '').toUpperCase();
 
-            if (!itineraries[itinerario]) {
-                itineraries[itinerario] = [];
-            }
-            itineraries[itinerario].push({ endereco, referencia, horario });
-        });
-    }
-    
-        // Processa os dados do CSV e organiza por itinerário
-        function processCSVData(data) {
-            data.forEach(row => {
-                const { itinerario, endereco, referencia, horario } = row;
+            if (turno === 'ADM' && itinerario) {
                 if (!itineraries[itinerario]) {
                     itineraries[itinerario] = [];
                 }
                 itineraries[itinerario].push({ endereco, referencia, horario });
-            });
+            }
+        });
+        renderItineraryList();
+    }
+    
+        function renderItineraryList() {
+            const container = document.querySelector('.containeritinerarios');
+            const itineraryNames = Object.keys(itineraries).sort();
+            if (itineraryNames.length === 0) {
+                container.innerHTML = '<p class="empty-message">Nenhum itinerário disponível para este turno.</p>';
+                return;
+            }
+            container.innerHTML = itineraryNames
+                .map(name => `<a class=\"containerturnos-item\">${name}</a>`) 
+                .join('');
         }
     
-        // Exibe a tela sobreposta com os dados do itinerário
-        document.querySelectorAll('.containerturnos-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const locationName = this.textContent.trim();
-                const overlay = document.getElementById('overlay');
-                const overlayTitle = document.getElementById('overlay-title');
-                const itineraryData = document.getElementById('itinerary-data');
-    
-                // Atualiza o título e os dados da tabela
-                overlayTitle.textContent = `Itinerário: ${locationName}`;
-                if (itineraries[locationName]) {
-                    itineraryData.innerHTML = itineraries[locationName]
-                        .map(row => `
-                            <tr>
-                                <td>${row.endereco}</td>
-                                <td>${row.referencia}</td>
-                                <td>${row.horario}</td>
-                            </tr>
-                        `).join('');
-                } else {
-                    itineraryData.innerHTML = `<tr><td colspan="3">Nenhum dado encontrado.</td></tr>`;
-                }
-    
-                // Exibe a tela sobreposta
-                overlay.style.display = 'block';
-            });
+        // Exibe a tela sobreposta com os dados do itinerário (delegação de evento)
+        document.querySelector('.containeritinerarios').addEventListener('click', function (e) {
+            const target = e.target.closest('.containerturnos-item');
+            if (!target) return;
+            const locationName = target.textContent.trim();
+            const overlay = document.getElementById('overlay');
+            const overlayTitle = document.getElementById('overlay-title');
+            const itineraryData = document.getElementById('itinerary-data');
+
+            overlayTitle.textContent = `Itinerário: ${locationName}`;
+            if (itineraries[locationName]) {
+                itineraryData.innerHTML = itineraries[locationName]
+                    .map(row => `
+                        <tr>
+                            <td>${row.endereco}</td>
+                            <td>${row.referencia}</td>
+                            <td>${row.horario}</td>
+                        </tr>
+                    `).join('');
+            } else {
+                itineraryData.innerHTML = `<tr><td colspan="3">Nenhum dado encontrado.</td></tr>`;
+            }
+
+            overlay.style.display = 'block';
         });
     
         // Fecha a tela sobreposta
